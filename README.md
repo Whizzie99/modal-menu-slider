@@ -1,1 +1,1 @@
-building custom nav slider and custom modal
+custom nav slider and custom modal

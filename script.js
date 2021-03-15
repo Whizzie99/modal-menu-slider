@@ -1,21 +1,22 @@
-const toggle = document.getElementById('toggle');
+const toggleBtn = document.getElementById('toggle');
 const close = document.getElementById('close');
 const open = document.getElementById('open');
 const modal = document.getElementById('modal');
 
 
 // Toggle Nav
-toggle.addEventListener('click', () =>{
+toggleBtn.addEventListener('click', () =>{
     document.body.classList.toggle('show-nav')
 });
 
 // show modal
-open.addEventListener('click', () =>
-    modal.classList.add('show-modal')
-);
+open.addEventListener('click', () => {
+    modal.classList.add('show-modal');
+    console.log('supposed to work');
+})
 
 // Hide modal
 close.addEventListener('click', () => modal.classList.remove('show-modal'));
 
 // hide modal on outside click
-window.addEventListener('click', e => e.targert === modal ? modal.classList.remove('show-modal') : false);
+window.addEventListener('click', e => e.target == modal ? modal.classList.remove('show-modal') : false );
